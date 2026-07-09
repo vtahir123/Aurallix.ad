@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Our Portfolio - Auralix</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Montserrat:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#3f0007",
+                        "primary-fixed-dim": "#e11d2e",
+                        "on-tertiary-fixed-variant": "#8f0041",
+                        "surface-bright": "#1a1a1a",
+                        "tertiary": "#ffb4ab",
+                        "on-tertiary": "#690005",
+                        "on-primary-container": "#ffdadb",
+                        "primary": "#e11d2e",
+                        "surface-container-low": "#0d0d0d",
+                        "on-secondary-fixed": "#002022",
+                        "background": "#0a0a0a",
+                        "surface-container": "#141414",
+                        "surface": "#0a0a0a",
+                        "surface-container-high": "#1a1a1a",
+                        "inverse-primary": "#e11d2e",
+                        "primary-fixed": "#ffdadb",
+                        "on-surface": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#00686f",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#00eefc",
+                        "on-primary-fixed-variant": "#990011",
+                        "surface-tint": "#e11d2e",
+                        "secondary": "#ffffff",
+                        "surface-dim": "#0a0a0a",
+                        "outline-variant": "#1a1a1a",
+                        "on-error": "#690005",
+                        "primary-container": "#990011",
+                        "surface-container-lowest": "#000000",
+                        "on-surface-variant": "#a3a3a3",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-secondary": "#00363a",
+                        "inverse-on-surface": "#2f3035",
+                        "on-tertiary-container": "#ffdad6",
+                        "on-tertiary-fixed": "#3f0019",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "on-background": "#ffffff",
+                        "surface-container-highest": "#222222",
+                        "outline": "#262626",
+                        "inverse-surface": "#ffffff",
+                        "secondary-fixed": "#7df4ff",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "surface-variant": "#141414",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#b60055"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "max-width": "1440px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": [
+                            "Inter"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "headline-lg": [
+                            "Montserrat"
+                        ],
+                        "headline-lg-mobile": [
+                            "Montserrat"
+                        ],
+                        "display-lg": [
+                            "Montserrat"
+                        ],
+                        "headline-md": [
+                            "Montserrat"
+                        ],
+                        "label-sm": [
+                            "JetBrains Mono"
+                        ]
+                    },
+                    "fontSize": {
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "300"
+                            }
+                        ],
+                        "body-md": [
+                            "15px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg": [
+                            "56px",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-lg": [
+                            "88px",
+                            {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "300"
+                            }
+                        ],
+                        "headline-md": [
+                            "32px",
+                            {
+                                "lineHeight": "1.3",
+                                "fontWeight": "400",
+                                "letterSpacing": "-0.01em"
+                            }
+                        ],
+                        "label-sm": [
+                            "11px",
+                            {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "500"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .premium-border {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-panel-subtle {
+            background: rgba(30, 34, 42, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .project-card {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-white/20 selection:text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b premium-border transition-transform duration-300"
+        id="main-nav">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+            <a class="font-headline-md text-2xl font-semibold text-on-surface tracking-tighter"
+                href="/auralix%20final.html">Auralix<span class="text-primary">.</span></a>
+            <div class="hidden md:flex items-center space-x-12">
+                <a class="text-on-surface-variant font-label-sm text-label-sm uppercase hover:text-primary transition-colors duration-300"
+                    href="/auralix%20final.html#work">Work</a>
+                <a class="text-on-surface-variant font-label-sm text-label-sm uppercase hover:text-primary transition-colors duration-300"
+                    href="/auralix%20final.html#services">Services</a>
+                <a class="text-on-surface-variant font-label-sm text-label-sm uppercase hover:text-primary transition-colors duration-300"
+                    href="/auralix%20final.html#contact">Contact</a>
+            </div>
+            <a href="mailto:auralix11@gmail.com?subject=Let's%20Create%20Something%20Amazing%20with%20Aurallix&body=Hi%20Aurallix%20Team%2C%0A%0AI'm%20interested%20in%20creating%20a%20hyper-realistic%20video%20ad%20for%20my%20brand%20and%20would%20love%20to%20get%20started%20with%20Aurallix.%0A%0ACould%20you%20please%20share%20your%20available%20packages%20and%20pricing%3F"
+                class="inline-block bg-white text-black px-6 py-2.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/90 transition-colors duration-300">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="pt-36 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+        <!-- Back Navigation -->
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest flex items-center gap-2 mb-12 group self-start"
+            href="/auralix%20final.html">
+            <span
+                class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_left_alt</span>
+            Back to Home
+        </a>
+
+        <!-- Header Title & Subtitle -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+            <div>
+                <span class="font-label-sm text-label-sm text-white/40 uppercase tracking-widest mb-3 block">Complete
+                    Transmissions Archive</span>
+                <h1
+                    class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight font-medium">
+                    Our <span class="text-primary">Portfolio</span>
+                </h1>
+            </div>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                Explore our curated history of high-fidelity visual assets, commercial campaigns, and experimental
+                motion design.
+            </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex gap-4 border-b border-white/5 pb-4 mb-12 flex-wrap">
+            <button onclick="filterCategory('ALL', this)"
+                class="filter-btn font-label-sm text-label-sm uppercase tracking-widest px-4 py-2 border-b-2 text-primary border-primary transition-all duration-300">
+                All
+            </button>
+            <button onclick="filterCategory('AUTOMOTIVE', this)"
+                class="filter-btn font-label-sm text-label-sm uppercase tracking-widest px-4 py-2 border-b-2 text-on-surface-variant border-transparent hover:text-primary transition-all duration-300">
+                Automotive
+            </button>
+            <button onclick="filterCategory('BEAUTY / LIFESTYLE', this)"
+                class="filter-btn font-label-sm text-label-sm uppercase tracking-widest px-4 py-2 border-b-2 text-on-surface-variant border-transparent hover:text-primary transition-all duration-300">
+                Beauty / Lifestyle
+            </button>
+            <button onclick="filterCategory('COMMERCIAL', this)"
+                class="filter-btn font-label-sm text-label-sm uppercase tracking-widest px-4 py-2 border-b-2 text-on-surface-variant border-transparent hover:text-primary transition-all duration-300">
+                Commercial
+            </button>
+            <button onclick="filterCategory('EXPERIMENTAL', this)"
+                class="filter-btn font-label-sm text-label-sm uppercase tracking-widest px-4 py-2 border-b-2 text-on-surface-variant border-transparent hover:text-primary transition-all duration-300">
+                Experimental
+            </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+            <!-- Column 1 -->
+            <div class="flex flex-col gap-12">
+                <!-- Project 1 -->
+                <article class="project-card group cursor-pointer" data-category="AUTOMOTIVE"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-neon-car-driving-through-the-city-at-night-42234-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">01:15</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">4K
+                                HDR</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Automotive</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 10 -->
+                <article class="project-card group cursor-pointer" data-category="AUTOMOTIVE"
+                    onclick="openModal('Chips.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <video
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="Chips.mp4" autoplay loop muted playsinline></video>
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:30</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Automotive</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Mix Veggie Chips</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            A vibrant, veggie-rich portion of chips crafted for clean, colourful snacking.</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card group cursor-pointer" data-category="EXPERIMENTAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-futuristic-subway-station-with-neon-lights-41589-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">02:00</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">8K
+                                RED</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Experimental</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 7 -->
+                <article class="project-card group cursor-pointer" data-category="BEAUTY / LIFESTYLE"
+                    onclick="openModal('chocolate bar.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <video
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="chocolate bar.mp4" autoplay loop muted playsinline></video>
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:15</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Beauty
+                            / Lifestyle</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Millet Wafer Protein Bar</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Packed with the goodness of millets</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="flex flex-col gap-12">
+                <!-- Project 2 -->
+                <article class="project-card group cursor-pointer" data-category="BEAUTY / LIFESTYLE"
+                    onclick="openModal('Bodybuilder.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <video
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="Bodybuilder.mp4" autoplay loop muted playsinline></video>
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:30</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Beauty
+                            / Lifestyle</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Pure Micronised Creatine Monohydrate</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Supports Athletic Performance and Power</p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card group cursor-pointer" data-category="AUTOMOTIVE"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-neon-car-driving-through-the-city-at-night-42234-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:40</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">4K
+                                HDR</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Automotive</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 11 -->
+                <article class="project-card group cursor-pointer" data-category="COMMERCIAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-31766-large.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:45</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Commercial</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 8 -->
+                <article class="project-card group cursor-pointer" data-category="COMMERCIAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-31766-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">03:10</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">4K
+                                HDR</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Commercial</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="flex flex-col gap-12">
+                <!-- Project 3 -->
+                <article class="project-card group cursor-pointer" data-category="COMMERCIAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-cyberpunk-neon-city-street-at-night-41584-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:45</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">4K
+                                HDR</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Commercial</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 9 -->
+                <article class="project-card group cursor-pointer" data-category="BEAUTY / LIFESTYLE"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-girl-in-sunglasses-under-neon-lights-42227-large.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">00:15</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">BEAUTY
+                            / LIFESTYLE</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card group cursor-pointer" data-category="EXPERIMENTAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-exploring-a-futuristic-digital-neon-city-43132-large.mp4')">
+                    <div class="relative aspect-video rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">01:30</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">4K
+                                HDR</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Experimental</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+
+                <!-- Project 12 -->
+                <article class="project-card group cursor-pointer" data-category="EXPERIMENTAL"
+                    onclick="openModal('https://assets.mixkit.co/videos/preview/mixkit-exploring-a-futuristic-digital-neon-city-43132-large.mp4', true)">
+                    <div class="relative aspect-[9/16] rounded-lg overflow-hidden mb-6 premium-border">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] grayscale-[30%] group-hover:grayscale-0"
+                            src="HOONY HORIZENTALE.png" alt="Upcoming">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 rounded-full glass-panel-subtle flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-500">
+                                <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex items-center gap-3">
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">01:00</span>
+                            <span
+                                class="font-label-sm text-[10px] text-white glass-panel-subtle px-3 py-1.5 rounded-full backdrop-blur-md">Vertical
+                                Native</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span
+                            class="font-label-sm text-[10px] text-primary uppercase tracking-[0.2em] block mb-2">Experimental</span>
+                        <h3
+                            class="font-headline-md text-xl text-on-surface font-medium group-hover:text-primary transition-colors duration-300">
+                            Upcoming</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed line-clamp-2">
+                            Upcoming</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background border-t premium-border w-full pt-24 pb-12">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
+                <div class="md:col-span-2">
+                    <a class="font-headline-md text-3xl font-semibold text-on-surface tracking-tighter block mb-6"
+                        href="/auralix%20final.html">Auralix<span class="text-primary">.</span></a>
+                    <p class="font-body-md text-on-surface-variant max-w-sm">Upcoming</p>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest mb-6">Navigation
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class=""><a
+                                class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                href="/auralix%20final.html#work">Selected Work</a></li>
+                        <li class=""><a
+                                class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                href="/auralix%20final.html#services">Studio Services</a></li>
+                        <li class=""><a
+                                class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                href="/auralix%20final.html#">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest mb-6">Connect</h4>
+                    <ul class="space-y-4">
+                        <li class=""><a
+                                class="inline-block bg-primary text-white px-5 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/90 transition-colors"
+                                href="mailto:auralix11@gmail.com?subject=Let's%20Create%20Something%20Amazing%20with%20Auralix&body=Hi%20Auralix%20Team%2C%0A%0AI'm%20interested%20in%20creating%20a%20hyper-realistic%20video%20ad%20for%20my%20brand%20and%20would%20love%20to%20get%20started%20with%20Auralix.%0A%0ACould%20you%20please%20share%20your%20available%20packages%20and%20pricing%3F">Inquiries</a>
+                        </li>
+                        <li class=""><a
+                                class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                href="https://www.instagram.com/auralix1/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
+                        <li class=""><a
+                                class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t premium-border gap-4">
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">© 2024 Auralix
+                    Studio. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors"
+                        href="/privacy.html">Privacy</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors"
+                        href="/terms.html">Term & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Lightbox Modal -->
+    <div id="video-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 hidden opacity-0 transition-opacity duration-300">
+        <!-- Click outside to close -->
+        <div class="absolute inset-0 cursor-zoom-out" onclick="closeModal()"></div>
+        <div class="relative w-full max-w-5xl aspect-video bg-black shadow-2xl border border-white/10 rounded-lg overflow-hidden z-10 scale-95 transition-transform duration-300"
+            id="modal-content">
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 z-20 flex w-10 h-10 items-center justify-center rounded-full bg-black/80 hover:bg-white text-white hover:text-black backdrop-blur transition-colors">
+                <span class="material-symbols-outlined select-none text-xl">close</span>
+            </button>
+            <!-- Video Player -->
+            <video id="modal-video" class="w-full h-full object-contain" controls autoplay playsinline src=""></video>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Simple nav background transition on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-background/95');
+                    nav.classList.remove('bg-background/80');
+                } else {
+                    nav.classList.add('bg-background/80');
+                    nav.classList.remove('bg-background/95');
+                }
+            }
+        });
+
+        // Category Filtering Logic
+        function filterCategory(category, buttonEl) {
+            // Update active style on filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('text-primary', 'border-primary');
+                btn.classList.add('text-on-surface-variant', 'border-transparent');
+            });
+            buttonEl.classList.add('text-primary', 'border-primary');
+            buttonEl.classList.remove('text-on-surface-variant', 'border-transparent');
+
+            // Show/Hide project items with transition
+            document.querySelectorAll('.project-card').forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'ALL' || cardCat === category) {
+                    card.style.display = 'block';
+                    // Trigger reflow to run animation
+                    card.offsetHeight;
+                    card.classList.remove('opacity-0', 'scale-95');
+                    card.classList.add('opacity-100', 'scale-100');
+                } else {
+                    card.classList.remove('opacity-100', 'scale-100');
+                    card.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => {
+                        if (card.classList.contains('opacity-0')) {
+                            card.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+        }
+
+        // Lightbox Modal Logic
+        const modal = document.getElementById('video-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalVideo = document.getElementById('modal-video');
+
+        function openModal(videoUrl, isVertical = false) {
+            if (!modal || !modalVideo || !modalContent) return;
+            modalVideo.src = videoUrl;
+
+            if (isVertical) {
+                modalContent.classList.remove('max-w-5xl', 'aspect-video');
+                modalContent.classList.add('max-w-sm', 'aspect-[9/16]');
+            } else {
+                modalContent.classList.remove('max-w-sm', 'aspect-[9/16]');
+                modalContent.classList.add('max-w-5xl', 'aspect-video');
+            }
+
+            modal.classList.remove('hidden');
+            // Trigger reflow
+            modal.offsetHeight;
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+            modalVideo.play();
+        }
+
+        function closeModal() {
+            if (!modal || !modalVideo || !modalContent) return;
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalVideo.pause();
+                modalVideo.src = "";
+            }, 300);
+        }
+    </script>
+
+
+</body>
+
+</html>
